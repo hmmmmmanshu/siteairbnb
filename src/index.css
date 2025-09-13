@@ -93,6 +93,10 @@
     @apply bg-primary text-primary-foreground rounded-full px-6 py-2.5 font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 active:scale-[0.98];
   }
   
+  .btn-purple {
+    @apply bg-purple-500 hover:bg-purple-600 text-white rounded-full px-6 py-2.5 font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 active:scale-[0.98];
+  }
+  
   .section {
     @apply py-12 md:py-16 lg:py-24;
   }

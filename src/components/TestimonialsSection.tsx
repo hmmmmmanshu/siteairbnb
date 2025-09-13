@@ -51,6 +51,24 @@ export default function TestimonialsSection() {
   const { t } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [expandedTestimonials, setExpandedTestimonials] = useState<Set<number>>(new Set());
+  
+  const truncateText = (text: string, maxLength: number = 150) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + "...";
+  };
+  
+  const toggleExpanded = (testimonialId: number) => {
+    setExpandedTestimonials(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(testimonialId)) {
+        newSet.delete(testimonialId);
+      } else {
+        newSet.add(testimonialId);
+      }
+      return newSet;
+    });
+  };
   
   const nextTestimonial = () => {
     if (isAnimating) return;
@@ -92,7 +110,7 @@ export default function TestimonialsSection() {
         </div>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="relative h-[400px] md:h-[300px]">
+          <div className="relative h-[500px] md:h-[300px]">
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
@@ -105,8 +123,8 @@ export default function TestimonialsSection() {
                       : "opacity-0 translate-x-full z-0"
                 )}
               >
-                <div className="flex flex-col md:flex-row gap-6 h-full">
-                  <div className="flex flex-col items-center md:items-start">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6 h-full">
+                  <div className="flex flex-col items-center md:items-start flex-shrink-0">
                     <div className="rounded-full overflow-hidden w-20 h-20 mb-4 border-2 border-primary">
                       <img 
                         src={testimonial.avatar} 
@@ -127,9 +145,27 @@ export default function TestimonialsSection() {
                   </div>
                   
                   <div className="flex-1 flex items-center">
-                    <blockquote className="italic text-muted-foreground">
-                      "{testimonial.content}"
-                    </blockquote>
+                    <div className="w-full">
+                      <blockquote className="italic text-muted-foreground">
+                        <span className="block md:hidden">
+                          {expandedTestimonials.has(testimonial.id) 
+                            ? `"${testimonial.content}"` 
+                            : `"${truncateText(testimonial.content)}"`
+                          }
+                        </span>
+                        <span className="hidden md:block">
+                          "{testimonial.content}"
+                        </span>
+                      </blockquote>
+                      {testimonial.content.length > 150 && (
+                        <button
+                          onClick={() => toggleExpanded(testimonial.id)}
+                          className="md:hidden mt-2 text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                        >
+                          {expandedTestimonials.has(testimonial.id) ? "Read Less" : "Read More"}
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

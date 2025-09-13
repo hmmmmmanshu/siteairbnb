@@ -61,14 +61,19 @@ export default function Navbar() {
               <Facebook className="h-5 w-5" />
             </a>
           </div>
-          <Button asChild className="btn-primary ml-4">
+          <Button asChild className="btn-purple ml-4">
             <a href="https://www.airbnb.co.in/rooms/17482812?source_impression_id=p3_1757707916_P3aPqmWYx3LJGd08" target="_blank" rel="noopener noreferrer">Book Now</a>
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-2">
-          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="rounded-full text-white">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+            className={cn("rounded-full transition-colors", scrolled ? "text-gray-700 dark:text-gray-300 hover:text-primary" : "text-white hover:text-primary")}
+          >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
@@ -124,7 +129,7 @@ export default function Navbar() {
             
             {/* CTA Button */}
             <div className="p-6 border-t border-border">
-              <Button asChild className="w-full btn-primary text-lg py-6">
+              <Button asChild className="w-full btn-purple text-lg py-6">
                 <a href="https://www.airbnb.co.in/rooms/17482812?source_impression_id=p3_1757707916_P3aPqmWYx3LJGd08" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
                   Book Now on Airbnb
                 </a>

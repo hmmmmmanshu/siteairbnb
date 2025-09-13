@@ -116,7 +116,7 @@ export default function Index() {
                 <p className="text-muted-foreground mb-6 md:mb-8 text-sm md:text-base leading-relaxed">
                   {t.home.welcome.description2}
                 </p>
-                <Button asChild className="btn-primary w-full sm:w-auto">
+                <Button asChild className="btn-purple w-full sm:w-auto">
                   <a href="https://www.airbnb.co.in/rooms/17482812?source_impression_id=p3_1757707916_P3aPqmWYx3LJGd08" target="_blank" rel="noopener noreferrer">
                     {t.home.welcome.learnMore} <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
@@ -168,7 +168,7 @@ export default function Index() {
               <p className="text-muted-foreground mb-6 md:mb-8 text-sm md:text-base leading-relaxed">
                 {t.home.cta.description}
               </p>
-              <Button asChild size="lg" className="btn-primary w-full sm:w-auto text-base md:text-lg py-3">
+              <Button asChild size="lg" className="btn-purple w-full sm:w-auto text-base md:text-lg py-3">
                 <a href="https://www.airbnb.co.in/rooms/17482812?source_impression_id=p3_1757707916_P3aPqmWYx3LJGd08" target="_blank" rel="noopener noreferrer">{t.home.cta.bookNow}</a>
               </Button>
             </div>
