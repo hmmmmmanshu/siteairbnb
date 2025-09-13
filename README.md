@@ -1,10 +1,10 @@
-# The Lilac Cottage - Luxury Mountain Retreat
+# The Lilac Cottage - Soulful Retreat in Mussoorie
 
-A beautiful and modern website for The Lilac Cottage, a luxury mountain retreat in Mussoorie, India.
+A beautiful and modern website for The Lilac Cottage, a soulful retreat in Mussoorie, India.
 
 ## About The Lilac Cottage
 
-Experience luxury and comfort at The Lilac Cottage, a beautiful mountain retreat in Mussoorie with stunning views and modern amenities. Our cottage offers the perfect blend of rustic charm and contemporary luxury for an unforgettable stay.
+Experience luxury and comfort at The Lilac Cottage, a beautiful soulful retreat in Mussoorie with stunning views and modern amenities. Our cottage offers the perfect blend of rustic charm and contemporary luxury for an unforgettable stay.
 
 ## Getting Started
 

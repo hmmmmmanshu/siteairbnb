@@ -14,7 +14,6 @@ export default function Navbar() {
   
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "The Cottage", path: "/apartments" },
     { name: "Amenities", path: "/amenities" },
     { name: "Things To Do", path: "/things-to-do" }
   ];
@@ -30,20 +29,20 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
   
-  return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "bg-white/90 dark:bg-card/90 backdrop-blur-lg py-3 shadow-md" : "bg-black/20 backdrop-blur-sm py-5")}>
+  return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", scrolled ? "bg-white/95 dark:bg-card/95 backdrop-blur-lg py-3 shadow-md" : "bg-black/20 backdrop-blur-sm py-5")}>
       <nav className="container flex justify-between items-center">
         {/* Logo/Brand */}
         <div className="flex items-center">
           <Link to="/" className="flex items-center space-x-2">
             <img src="/assets/logo.webp" alt="The Lilac Cottage" className="h-8 w-8" />
-            <span className="text-xl font-bold text-white">The Lilac Cottage</span>
+            <span className={cn("text-xl font-bold transition-colors", scrolled ? "text-gray-900 dark:text-white" : "text-white")}>The Lilac Cottage</span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8">
           {navLinks.map(link => <li key={link.name} className="relative">
-              <Link to={link.path} className="font-medium text-white transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+              <Link to={link.path} className={cn("font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full", scrolled ? "text-gray-700 dark:text-gray-300 hover:text-primary" : "text-white")}>
                 {link.name}
               </Link>
             </li>)}
@@ -52,13 +51,13 @@ export default function Navbar() {
         {/* Desktop Right Side */}
         <div className="hidden md:flex items-center space-x-4">
           <div className="flex items-center space-x-3">
-            <a href="#" className="text-white hover:text-primary transition-colors">
+            <a href="#" className={cn("hover:text-primary transition-colors", scrolled ? "text-gray-600 dark:text-gray-400" : "text-white")}>
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#" className="text-white hover:text-primary transition-colors">
+            <a href="#" className={cn("hover:text-primary transition-colors", scrolled ? "text-gray-600 dark:text-gray-400" : "text-white")}>
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="#" className="text-white hover:text-primary transition-colors">
+            <a href="#" className={cn("hover:text-primary transition-colors", scrolled ? "text-gray-600 dark:text-gray-400" : "text-white")}>
               <Facebook className="h-5 w-5" />
             </a>
           </div>

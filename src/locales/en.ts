@@ -9,7 +9,7 @@ export const en = {
     bookNow: "Book Now"
   },
   hero: {
-    subtitle: "MOUNTAIN RETREAT IN MUSSOORIE",
+    subtitle: "SOULFUL RETREAT IN MUSSOORIE",
     title: "Taking care of your mind, body and soul",
     description: "The Lilac Cottage is a two-bedroom bespoke cottage located in a quaint neighborhood 15 minutes short of Mussoorie Mall Road.",
     bookStay: "Book Your Stay",
@@ -40,7 +40,7 @@ export const en = {
   },
   testimonials: {
     title: "What Our Guests Say",
-    description: "Discover why our guests love staying at The Lilac Cottage for their mountain retreats."
+    description: "Discover why our guests love staying at The Lilac Cottage for their soulful retreats."
   },
   notFound: {
     title: "Page Not Found",
@@ -50,14 +50,14 @@ export const en = {
   home: {
     welcome: {
       subtitle: "Welcome to The Lilac Cottage",
-      title: "Mountain Retreat in Mussoorie",
+      title: "Soulful Retreat in Mussoorie",
       description1: "Escape from the hustle and hassle of your everyday routine and come away to the Lilac Cottage, where a serene world awaits you. Throw off all your worries and slip into the scenic, relaxed atmosphere and be pampered and rejuvenated.",
       description2: "Brightly lit & comfortably furnished rooms overlooking the mountains to make your stay pleasant, cozy and comfortable. Our two-bedroom cottage offers the perfect setting for a peaceful mountain getaway.",
       learnMore: "Learn More"
     },
     booking: {
       subtitle: "Book Your Stay",
-      title: "Reserve Your Mountain Retreat",
+      title: "Reserve Your Soulful Retreat",
       description: "Take the first step towards your peaceful mountain getaway by checking availability and securing your preferred dates. Experience the tranquility of Mussoorie from our cozy cottage.",
       benefits: ["Instant confirmation", "Best rate guarantee", "Flexible cancellation options", "Secure payment"]
     },
@@ -99,7 +99,7 @@ export const en = {
       }
     },
     cta: {
-      title: "Ready for Your Mountain Retreat?",
+      title: "Ready for Your Soulful Retreat?",
       description: "Book your stay today and experience the perfect blend of comfort, tranquility, and stunning mountain views.",
       bookNow: "Book Now"
     }

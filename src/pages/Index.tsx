@@ -4,37 +4,10 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight, Wifi, Utensils, Waves, LifeBuoy, MapPin, Coffee } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Sample apartments data
-const featuredApartments: ApartmentProps[] = [
-  {
-    id: "1",
-    name: "Bedroom 1",
-    description: "Brightly lit & comfortably furnished room overlooking the mountains with a cozy atmosphere.",
-    price: 3500,
-    capacity: 2,
-    size: 25,
-    image: "/assets/bedroom1.avif",
-    location: "Mountain View",
-    features: ["Wi-Fi", "Mountain View", "Comfortable Bed", "Air Conditioning", "Wardrobe"]
-  },
-  {
-    id: "2", 
-    name: "Bedroom 2",
-    description: "Spacious room with elegant furnishing and scenic mountain views for a pleasant stay.",
-    price: 3500,
-    capacity: 2,
-    size: 25,
-    image: "/assets/bedroom2.webp",
-    location: "Mountain View",
-    features: ["Wi-Fi", "Mountain View", "Comfortable Bed", "Air Conditioning", "Reading Corner"]
-  }
-];
 
 export default function Index() {
   const { t } = useLanguage();
@@ -154,7 +127,7 @@ export default function Index() {
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                   <img 
                     src="/assets/welcome-main.avif"
-                    alt="Mountain retreat view" 
+                    alt="Soulful retreat view" 
                     className="w-full h-full object-cover scale-75"
                   />
                 </div>
@@ -177,38 +150,6 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Featured Apartments */}
-        <section className="section">
-          <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12 animate-fade-in px-4">
-              <span className="text-sm text-primary font-medium uppercase tracking-wider">
-                {t.home.featuredApartments.subtitle}
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4">
-                {t.home.featuredApartments.title}
-              </h2>
-              <p className="text-muted-foreground text-sm md:text-base">
-                {t.home.featuredApartments.description}
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {featuredApartments.map((apartment, index) => (
-                <div key={apartment.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                  <ApartmentCard apartment={apartment} />
-                </div>
-              ))}
-            </div>
-            
-            <div className="text-center mt-8 md:mt-12 px-4">
-              <Button asChild className="btn-primary w-full sm:w-auto">
-                <a href="https://www.airbnb.co.in/rooms/17482812?source_impression_id=p3_1757707916_P3aPqmWYx3LJGd08" target="_blank" rel="noopener noreferrer">
-                  {t.home.featuredApartments.viewAll} <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
         
         {/* Testimonials Section */}
         <TestimonialsSection />
