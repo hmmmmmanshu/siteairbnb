@@ -124,25 +124,39 @@ export default function Index() {
               </div>
               
               <div className="relative animate-fade-in [animation-delay:300ms] order-1 lg:order-2">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                {/* Main large image - center */}
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                   <img 
                     src="/assets/welcome-main.avif"
                     alt="Soulful retreat view" 
-                    className="w-full h-full object-cover scale-75"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 w-2/3 rounded-2xl overflow-hidden shadow-xl">
+                
+                {/* Bottom left image - slightly larger */}
+                <div className="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 w-3/5 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                   <img 
                     src="/assets/welcome-bottom-left.avif"
                     alt="Cottage interior" 
-                    className="w-full h-full object-cover scale-75"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -top-3 -right-3 md:-top-6 md:-right-6 w-1/2 rounded-2xl overflow-hidden shadow-xl">
+                
+                {/* Top right image - medium size */}
+                <div className="absolute -top-4 -right-4 md:-top-8 md:-right-8 w-2/5 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                   <img 
                     src="/assets/welcome-top-right.avif"
                     alt="Mountain landscape" 
-                    className="w-full h-full object-cover scale-75"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Fourth image - bottom right */}
+                <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 w-1/3 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                  <img 
+                    src="/assets/bedroom1.avif"
+                    alt="Cozy bedroom" 
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
