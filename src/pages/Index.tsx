@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import BookingTicker from "@/components/BookingTicker";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Wifi, Utensils, Waves, LifeBuoy, MapPin, Coffee } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -154,9 +153,6 @@ export default function Index() {
         
         {/* Testimonials Section */}
         <TestimonialsSection />
-        
-        {/* Booking Platforms Ticker */}
-        <BookingTicker />
         
         {/* CTA Section */}
         <section className="relative py-16 md:py-24 bg-primary/5">
