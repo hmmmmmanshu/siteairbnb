@@ -80,7 +80,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      <div className={cn("fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden transition-opacity duration-300 overflow-hidden", mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none")}>
+      <div className={cn("fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden transition-opacity duration-300", mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none")}>
         <div className={cn("fixed inset-y-0 right-0 w-4/5 max-w-sm bg-white dark:bg-card shadow-2xl transition-transform duration-300 ease-in-out overflow-y-auto", mobileMenuOpen ? "translate-x-0" : "translate-x-full")}>
           <div className="flex flex-col h-full">
             {/* Header */}
@@ -96,12 +96,12 @@ export default function Navbar() {
 
             {/* Navigation Links */}
             <div className="flex-1 px-6 py-6">
-              <ul className="space-y-1">
+              <ul className="space-y-2">
                 {navLinks.map(link => (
                   <li key={link.name}>
                     <Link 
                       to={link.path} 
-                      className="flex items-center py-4 px-3 text-lg font-medium transition-colors hover:text-primary hover:bg-primary/5 rounded-lg" 
+                      className="flex items-center py-4 px-4 text-lg font-semibold text-gray-900 dark:text-white transition-colors hover:text-primary hover:bg-primary/10 rounded-lg border border-transparent hover:border-primary/20" 
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.name}

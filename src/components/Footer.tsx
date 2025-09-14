@@ -8,9 +8,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-card text-card-foreground pt-12 pb-6 border-t">
+      <div className="container px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8">
           <div className="animate-fade-in [animation-delay:100ms]">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
           
           <div className="animate-fade-in [animation-delay:200ms]">
-            <h4 className="text-xl font-bold mb-4">{t.footer.quickLinks}</h4>
+            <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
               {[
                 { name: "The Cottage", path: "/" },
@@ -60,8 +60,8 @@ export default function Footer() {
           </div>
           
           <div className="animate-fade-in [animation-delay:300ms]">
-            <h4 className="text-xl font-bold mb-4">{t.footer.contact}</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">{t.footer.contact}</h4>
+            <ul className="space-y-2 md:space-y-3">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary" />
                 <span className="text-muted-foreground">
@@ -82,26 +82,6 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className="animate-fade-in [animation-delay:400ms]">
-            <h4 className="text-xl font-bold mb-4">{t.footer.newsletter}</h4>
-            <p className="text-muted-foreground mb-4">
-              {t.footer.newsletterDesc}
-            </p>
-            <form className="flex flex-col space-y-2">
-              <input 
-                type="email" 
-                placeholder={t.footer.yourEmail} 
-                className="rounded-md px-4 py-2 bg-muted text-foreground"
-                required 
-              />
-              <button 
-                type="submit" 
-                className="btn-primary mt-2"
-              >
-                {t.footer.subscribe}
-              </button>
-            </form>
-          </div>
         </div>
         
         <div className="border-t border-border pt-8 mt-8 text-center text-muted-foreground">
