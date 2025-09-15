@@ -1,10 +1,8 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Facebook } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navbar() {
@@ -56,26 +54,6 @@ export default function Navbar() {
             </li>)}
         </ul>
 
-        {/* Right Side - Social Links and CTA */}
-        <div className="flex items-center space-x-2 md:space-x-4">
-          {/* Social Links */}
-          <div className="flex items-center space-x-2 md:space-x-3">
-            <a href="#" className={cn("hover:text-primary transition-colors", scrolled ? "text-gray-600 dark:text-gray-400" : "text-white")}>
-              <Instagram className="h-4 w-4 md:h-5 md:w-5" />
-            </a>
-            <a href="#" className={cn("hover:text-primary transition-colors", scrolled ? "text-gray-600 dark:text-gray-400" : "text-white")}>
-              <Linkedin className="h-4 w-4 md:h-5 md:w-5" />
-            </a>
-            <a href="#" className={cn("hover:text-primary transition-colors", scrolled ? "text-gray-600 dark:text-gray-400" : "text-white")}>
-              <Facebook className="h-4 w-4 md:h-5 md:w-5" />
-            </a>
-          </div>
-          
-          {/* CTA Button */}
-          <Button asChild className="btn-purple text-xs md:text-sm px-3 md:px-4 py-1 md:py-2">
-            <a href="https://www.airbnb.co.in/rooms/17482812?source_impression_id=p3_1757707916_P3aPqmWYx3LJGd08" target="_blank" rel="noopener noreferrer">Book Now</a>
-          </Button>
-        </div>
       </nav>
     </header>;
 }
