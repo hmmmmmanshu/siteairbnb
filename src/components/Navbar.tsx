@@ -94,34 +94,19 @@ export default function Navbar() {
               </Button>
             </div>
 
-            {/* Navigation Links */}
-            <div className="flex-1 px-6 py-6">
-              <ul className="space-y-2">
-                {navLinks.map(link => (
-                  <li key={link.name}>
-                    <Link 
-                      to={link.path} 
-                      className="flex items-center py-4 px-4 text-lg font-semibold text-gray-900 dark:text-white transition-colors hover:text-primary hover:bg-primary/10 rounded-lg border border-transparent hover:border-primary/20" 
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              
-              {/* Social Links */}
-              <div className="mt-8 pt-6 border-t border-border">
-                <p className="text-sm text-muted-foreground mb-4">Follow us</p>
-                <div className="flex items-center space-x-4">
-                  <a href="#" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                    <Instagram className="h-5 w-5 text-primary" />
+            {/* Social Links */}
+            <div className="flex-1 px-6 py-6 flex flex-col justify-center">
+              <div className="text-center">
+                <p className="text-sm text-muted-foreground mb-6">Follow us</p>
+                <div className="flex items-center justify-center space-x-4">
+                  <a href="#" className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                    <Instagram className="h-6 w-6 text-primary" />
                   </a>
-                  <a href="#" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                    <Linkedin className="h-5 w-5 text-primary" />
+                  <a href="#" className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                    <Linkedin className="h-6 w-6 text-primary" />
                   </a>
-                  <a href="#" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                    <Facebook className="h-5 w-5 text-primary" />
+                  <a href="#" className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                    <Facebook className="h-6 w-6 text-primary" />
                   </a>
                 </div>
               </div>
