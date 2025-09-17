@@ -13,9 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8">
           <div className="animate-fade-in [animation-delay:100ms]">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xs">LS</span>
-              </div>
+              <img src="/assets/logo.webp" alt="The Lilac Cottage" className="h-12 w-12 rounded-full" />
               <h4 className="text-xl font-bold">The Lilac Cottage</h4>
             </div>
             <p className="text-muted-foreground mb-4">
